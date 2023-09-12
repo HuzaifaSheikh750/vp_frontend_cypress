@@ -1,0 +1,11 @@
+node_modules
+.gitignore
+azure-pipelines.yml
+.firebaserc
+.env
+yarn.lock
+yarn-error.log
+Dockerfile
+.vscode
+.firebase
+firebase.json

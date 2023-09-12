@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="html" style="position: absolute">
+      <table>
+        <thead style="border-radius: 2px; height: 2rem">
+          <tr>
+            <th>INVOICE ID</th>
+            <th>ORDER ID</th>
+            <th>TOTAL QTY</th>
+            <th>DATE</th>
+            <th>INVOICE STATUS</th>
+            <th>DEBIT</th>
+            <th>CREDIT</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${$_.take(transactionHistory.docs, transactionHistory.totalDocs).map( (value, index) => `
+          <tr>
+            <td>${value.paymentId}</td>
+            <td>${value.orderRefId.orderId}</td>
+            <td>${value.orderRefId.totalQuantity}</td>
+            <td>${moment(value.paymentDate).utc().format("DD-MMM-YYYY")}</td>
+            <td>${$h.capitalizeFirstLetter(value.status)}</td>
+            <td>
+              ${ value.status == "paid" ? $h.formatCurrency(value.orderRefId.totalAmount) : "" }
+            </td>
+            <td>
+              ${ value.status == "refund" ? $h.formatCurrency(value.orderRefId.totalAmount) : "" }
+            </td>
+          </tr>
+          ` )}
+        </tbody>
+      </table>
+    </div>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      table {
+        background-color: hsl(0deg, 0%, 90%);
+        border-radius: 2px;
+      }
+      thead {
+        border-radius: 2px;
+      }
+      th {
+        background-color: red;
+        font-size: 12px;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        border: 1px solid #000;
+      }
+      td {
+        background-color: red;
+        font-size: 12px;
+        padding: 0.3rem;
+        text-align: center;
+        border: 1px solid #000000;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+export const GET_PLAN = "GET_PLAN";
+export const GET_PLAN_SUCCESS = "GET_PLAN_SUCCESS";
+export const GET_PLAN_FAIL = "GET_PLAN_FAIL";
+
+export const UPDATE_PLAN = "UPDATE_PLAN";
+export const UPDATE_PLAN_SUCCESS = "UPDATE_PLAN_SUCCESS";
+export const UPDATE_PLAN_FAIL = "UPDATE_PLAN_FAIL";
+
+export const RESET_ERROR = "RESET_ERROR";
+export const RESET_ERROR_PLAN = "RESET_ERROR_PLAN";

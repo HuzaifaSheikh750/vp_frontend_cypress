@@ -1,0 +1,54 @@
+# dependencies
+node_modules
+/node_modules
+
+#package files
+package-lock.json
+
+# build output
+/build
+/dist
+*.yml
+anislbe-playbook.yml
+
+# logs and debugging files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
+*.log
+
+# editor files
+.idea
+.vscode
+*.swp
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows files
+Thumbs.db
+Desktop.ini
+
+# cache files
+.cache
+
+
+# environment variables
+#.env.local
+#.env.development.local
+#.env.development
+#.env.test.local
+#.env.production
+#.env.production.local
+
+# misc
+*.bak
+*.DS_Store
+*.idea
+*.log
+*.orig
+*.tmp
+*.db

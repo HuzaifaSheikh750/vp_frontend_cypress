@@ -1,0 +1,1 @@
+export const ROLE_BASED_MENU = "ROLE_BASED_MENU";
